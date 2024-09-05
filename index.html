@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match Pair Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      grid-gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #1c87c9;
+      color: white;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .card:hover{
+        width: 101px;
+      height: 101px;
+    }
+    .matched {
+      background-color: #28a745;
+      pointer-events: none;
+    }
+    .hidden {
+      background-color: #1c87c9;
+    }
+    button{
+        margin-top: 20px;
+        height: 3rem;
+        width: 8rem;
+        background-color: rgb(118, 11, 240);
+        border: 2px solid rgb(118, 11, 240);
+        border-radius: .5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Match Pair Game</h1>
+  <div class="game-board" id="gameBoard"></div>
+  <button onclick="restartGame()">Restart Game</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
